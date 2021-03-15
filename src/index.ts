@@ -56,4 +56,6 @@ const extension: JupyterFrontEndPlugin<void> = {
   }
 };
 
+
+
 export default extension;
