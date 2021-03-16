@@ -26,15 +26,13 @@ const extension: JupyterFrontEndPlugin<void> = {
     // Add a command
     const command = 'jlab-examples:main-menu';
     commands.addCommand(command, {
-      label: 'Execute jlab-examples:main-menu Command',
-      caption: 'Execute jlab-examples:main-menu Command',
+      label: 'S2 tutorial',
+      caption: 'S2 tutorial',
       execute: (args: any) => {
         console.log(
-          `jlab-examples:main-menu has been called ${args['origin']}.`
+          `open new tab`
         );
-        window.alert(
-          `jlab-examples:main-menu has been called ${args['origin']}.`
-        );
+        window.open('https://nm.dev/s2/en/tutorial','_blank');
       }
     });
 
@@ -48,7 +46,7 @@ const extension: JupyterFrontEndPlugin<void> = {
 
     // Create a menu
     const tutorialMenu: Menu = new Menu({ commands });
-    tutorialMenu.title.label = 'About nmdev';
+    tutorialMenu.title.label = 'S2 help';
     mainMenu.addMenu(tutorialMenu, { rank: 80 });
 
     // Add the command to the menu
